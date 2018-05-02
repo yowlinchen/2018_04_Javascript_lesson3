@@ -24,7 +24,7 @@
             img.src = "LandScape.jpg"
             // don't see the image if no onload function becasue when it is loading (taking time), draw it
             img.onload = function () {
-                ctx.drawImage(img, 100, 100, 50, 50);
+                ctx.drawImage(img, 0, 0, cvs.width, cvs.height);
             }
         });
     </script>
