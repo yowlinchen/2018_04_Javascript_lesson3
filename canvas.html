@@ -34,7 +34,20 @@
             // 1. put file into c:\appserv\www
             // 2. http://127.0.0.1/檔案名稱
             let pixels = ctx.getImageData(0, 0, cvs.width, cvs.height);
-            console.log(pixels);
+            // console.log(pixels);
+            let data = pixels.data;
+            // Data processing with pixels
+            let avg;
+            for (let i = 0; i < data.length; i += 4) {
+                // data[i]; // red
+                // data[i + 1]; // green
+                // data[i + 2]; // blue
+                // data[i + 3]; // transparency
+                // grayscale --> RGB the same (0,0,0) / (255,255,255)
+                avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                data[i] = data[i + 1] = data[i + 2] = avg;
+            }
+            ctx.putImageData(pixels, 0, 0);
         }
     </script>
 </head>
