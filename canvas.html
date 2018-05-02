@@ -10,7 +10,10 @@
             // emulating jQuery way of selecting the element
             cvs = document.querySelector("#cvs");
             ctx = cvs.getContext("2d"); // Get canvas 對應的 context 物件
+            // filled
+            ctx.fillStyle = "red";
             ctx.fillRect(100, 100, 50, 50);
+            // non-filled
             ctx.strokeRect(300, 300, 50, 100);
         });
     </script>
