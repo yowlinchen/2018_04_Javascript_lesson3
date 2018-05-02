@@ -51,11 +51,13 @@
             // last class logic
             // display the one i want to show using data-index
 
-            // This time hide the current slide that is showing
+            // hide the current displayed slide
+            $(".slide:nth-child(" + (currentIndex + 1) + ")").fadeOut();
+            // Get the next number
             currentIndex = (currentIndex + 1) % 3;
             console.log(currentIndex);
-
             // show the next slide
+            $(".slide:nth-child(" + (currentIndex + 1) + ")").fadeIn();
         }
     </script>
 </head>
