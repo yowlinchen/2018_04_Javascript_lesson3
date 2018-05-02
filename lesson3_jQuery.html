@@ -40,6 +40,24 @@
             display: none;
         }
     </style>
+    <script>
+        // every 3 seconds change the picture
+        $(document).ready(function () {
+            window.setInterval(nextSlide, 3000);
+        });
+
+        let currentIndex = 0; // reoording the slide that is current showing 
+        function nextSlide() {
+            // last class logic
+            // display the one i want to show using data-index
+
+            // This time hide the current slide that is showing
+            currentIndex = (currentIndex + 1) % 3;
+            console.log(currentIndex);
+
+            // show the next slide
+        }
+    </script>
 </head>
 
 <body>
