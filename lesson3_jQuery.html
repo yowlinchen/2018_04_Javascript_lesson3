@@ -2,11 +2,33 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Slide</title>
+    <meta charset="utf-8" />
+    <script src="./jquery-3.3.1.min.js"></script>
+    <style>
+        body {
+            /* get rid of website edge space */
+            margin: 0px;
+        }
+
+        header {
+            /* header is 500px height & width is 100% Don't need to write it */
+            width: 100%;
+            height: 500px;
+        }
+
+        header>.slide {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-
+    <nav>Title</nav>
+    <header>
+        <div class="slide" style="background-color: red">Slide 1</div>
+    </header>
 </body>
 
 </html>
