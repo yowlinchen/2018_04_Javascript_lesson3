@@ -27,11 +27,21 @@
                 ctx.drawImage(img, 0, 0, cvs.width, cvs.height);
             }
         });
+
+        function grayscale() {
+            // somtimes this not work.  Needs to use localhost.  I am using liveserver way, so it is fine
+            // if opening file by double clicking it, needs to apply below WAs
+            // 1. put file into c:\appserv\www
+            // 2. http://127.0.0.1/檔案名稱
+            let pixels = ctx.getImageData(0, 0, 1, 1);
+            console.log(pixels);
+        }
     </script>
 </head>
 
 <body>
     <h3>Canvas</h3>
+    <button onclick="grayscale();">Grayscale</button>
     <canvas width="600" height="450" id="cvs" style="border:1px solid #888888;">
 
     </canvas>
