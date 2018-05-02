@@ -49,12 +49,24 @@
             }
             ctx.putImageData(pixels, 0, 0);
         }
+
+        function invert() {
+            let pixels = ctx.getImageData(0, 0, cvs.width, cvs.height);
+            let data = pixels.data;
+            for (let i = 0; i < data.length; i += 4) {
+                data[i] = 255 - data[i];
+                data[i + 1] = 255 - data[i + 1];
+                data[i + 2] = 255 - data[i + 2];
+            }
+            ctx.putImageData(pixels, 0, 0);
+        }
     </script>
 </head>
 
 <body>
     <h3>Canvas</h3>
     <button onclick="grayscale();">Grayscale</button>
+    <button onclick="invert();">Invert</button>
     <canvas width="600" height="450" id="cvs" style="border:1px solid #888888;">
 
     </canvas>
