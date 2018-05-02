@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Canvas</title>
+    <script>
+        let cvs, ctx;
+        window.addEventListener("load", function () {
+            // document.querySelector(CSS選擇器)
+            // emulating jQuery way of selecting the element
+            cvs = document.querySelector("#cvs");
+            ctx = cvs.getContext("2d"); // Get canvas 對應的 context 物件
+            ctx.fillRect(100, 100, 50, 50);
+        });
+    </script>
+</head>
+
+<body>
+    <h3>Canvas</h3>
+    <canvas width="600" height="450" id="cvs" style="border:1px solid #888888;">
+
+    </canvas>
+</body>
+
+</html>
