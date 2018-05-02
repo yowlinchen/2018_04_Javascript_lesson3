@@ -17,10 +17,14 @@
             height: 500px;
         }
 
+        /* absolute position use the "whole website" for reference not using its parents, header tag  */
+
         header>.slide {
             /* will go with outer 100% So in theory you don't need those ? can test it  */
             /* default --> position:static; */
             position: absolute;
+            left: 0px;
+            top: 0px;
             width: 100%;
             height: 100%;
         }
