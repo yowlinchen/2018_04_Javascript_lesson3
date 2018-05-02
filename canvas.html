@@ -17,6 +17,15 @@
             ctx.fillText("Hello", 200, 200)
             // non-filled
             ctx.strokeRect(300, 300, 50, 100);
+            // loading picture
+            // ctx.drawImage(圖片物件, x, y, width, height);
+            // picture object is for example <img> tag, can write in hmtl and get it later
+            let img = new Image();
+            img.src = "LandScape.jpg"
+            // don't see the image if no onload function becasue when it is loading (taking time), draw it
+            img.onload = function () {
+                ctx.drawImage(img, 100, 100, 50, 50);
+            }
         });
     </script>
 </head>
